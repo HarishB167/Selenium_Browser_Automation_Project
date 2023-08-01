@@ -1,9 +1,11 @@
 from dotenv import load_dotenv
 import os
+from driver import Driver
 
 load_dotenv()
 
-CHROME_DRIVER_PATH = os.environ.get("CHROME_DRIVER_PATH")
 
-print("Running")
-print(CHROME_DRIVER_PATH)
+if __name__ == "__main__":
+    print("Started")
+    driver = Driver().get_chrome_driver()
+    print(driver)
